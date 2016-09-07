@@ -1,3 +1,26 @@
+<?php
+session_start();
+if(isset($_GET['authorized'])){
+    $_SESSION["authorized"] = $_GET['authorized'];
+}
+function headtab()
+	{
+	if ($_SESSION["authorized"]=="true")
+		{
+		echo '
+		<span class="tab" style="float:right;"><a href="logout.php">Logout</a></span>
+		<span class="tab" style="float:right;"><a href="#">Account</a></span>
+		';
+		}
+		else
+		{
+		echo'
+		<span class="tab" style="float:right;"><a href="register.html">Register</a></span>
+		<span class="tab" style="float:right;"><a href="login.html">Login</a></span>
+		';		
+		}		
+	}
+?>
 <html>
 	<head>
 		<title>Online GPS Tracker-Map</title>
@@ -17,10 +40,11 @@
 	</div>
 	<div id="menu">
 	<!--	<span class="tab" style="float:left;"><a href="main.html">Home</a></span> -->
-		<span class="tab" style="float:left;"><a href="map.html">Map</a></span>
+		<span class="tab" style="float:left;"><a href="map.php">Map</a></span>
 	<!--	<span class="tab" style="float:left;"><a href="#">About Us</a></span> -->
-		<span class="tab" style="float:right;"><a href="register.html">Register</a></span>
-		<span class="tab" style="float:right;"><a href="login.html">Login</a></span>
+	<?php
+		headtab();
+	?>
 	</div>
 	<script type="text/javascript">
 	$(document).ready(function() {

@@ -1,51 +1,97 @@
 body
 	{
-	background-color:#87cefa;
+	background-color:#33bbff;
+	}
+/*----------------------------Header-----------------------------------*/
+.unselectable 
+	{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 	}
 #head
 	{
-	margin: 0 auto;
-	width: 96%;
+	margin: 5 auto;
+	width: auto;
 	clear: left;
 	padding: 25px;
 	font-size:75px;
-	background-image: url("images/header1.png");
+	background-image: url("images/Header.png");
 	border-radius: 10px;
 	background-repeat: no-repeat;
-	background-color: #000000;
-	color:white;
+	background-color: #AARRGGBB;
+	color:#AARRGGBB;
 	font-family:helvetica;
 	font-style:bold;
 	}
+/*----------------------------------Tabs-------------------------------*/
 #menu
 	{
 	float: left;
 	width: 100%;
-	background-color: #000080;
+	background-color: #006699;
+	border-radius:10px;
+	font-family:helvetica;
+	}
+a:link,a:visited
+	{
+	text-decoration:none;
+	color:white;
+	display:inline-block;
+	}
+.tab
+	{
+	color:white;
+	padding: 10px 25px;
+	display: block;
+	font-size:20px;
+	text-decoration:none;
+	color:white;
+	display:inline-block;
+	}
+.mouseonit
+	{
+	background-color:#00334d;
 	border-radius:10px;
 	}
-#menu ul li
+/*--------------------------------Login Page---------------------------*/
+.login
 	{
-	list-style-type: none;
-	display: inline;
+	margin: 20px auto 20px auto;
+	padding: 50px;
+	text-align:center;
+	font-family:helvetica;
+	background-color:#00334d;
+	color: white;
+	font-size: 20px;
+	border-radius:15px;
 	}
-#menu li a
+.login th,td
 	{
-	display: block;
-	text-decoration: none;
-	padding: 1px 25px;
-	float: left;
-	font-size:30px;
-	color:white;
+	padding:10px;
 	}
-	
-#menu li a:hover
+.fail
 	{
-	background-color:black;
+	color:red;
 	}
+/*--------------------------------Register Page------------------------*/
+.reg
+	{
+	margin: 20px auto 20px auto;
+	padding: 50px;
+	text-align:center;
+	font-family:helvetica;
+	background-color:#00334d;
+	color: white;
+	font-size: 20px;
+	border-radius:15px;
+	}
+/*------------------------------Maps Tab-------------------------------*/
 #map
 	{
 	width: 800px;
-	height: 500px;
-	background-color: grey;
+	height: 475px;
 	}
